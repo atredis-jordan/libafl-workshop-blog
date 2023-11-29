@@ -1,0 +1,9 @@
+*.o
+*.swp
+.cur_input*
+.gdb_history
+/libaflsrc
+**/aflpp_sol
+core.*
+*.zip
+TODO.md

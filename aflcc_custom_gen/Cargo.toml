@@ -1,0 +1,11 @@
+[package]
+name = "aflcc_custom_gen"
+version = "0.10.0"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+libafl_bolts = "0.11.1"
+libafl = { version = "0.11.1", features = ["default", "nautilus"] }
+libafl_targets = { version = "0.11.1", features = ["sancov_pcguard_edges", "libfuzzer"] }
+env_logger = "0.10"

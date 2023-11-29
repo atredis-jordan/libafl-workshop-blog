@@ -1,0 +1,8 @@
+t.c
+*.o
+target
+target_dbg
+target_instrumented
+target_persistent
+libtarget_libfuzzer.a
+target_libfuzzer
