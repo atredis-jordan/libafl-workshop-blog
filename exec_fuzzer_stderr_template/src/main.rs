@@ -52,12 +52,13 @@ use libafl::{
     stages::mutational::StdMutationalStage,
     state::{
         StdState,
-        HasClientPerfMonitor,
+        
+        MaybeHasClientPerfMonitor,
     },
     events::{
         simple::SimpleEventManager,
         EventFirer,
-    }
+    },
     schedulers::RandScheduler,
 };
 
@@ -83,7 +84,7 @@ impl NewOutputFeedback {
 
 impl<S> Feedback<S> for NewOutputFeedback
 where
-    S: UsesInput + HasClientPerfMonitor,
+    S: UsesInput + MaybeHasClientPerfMonitor + libafl::state:State,
 {
     fn is_interesting<EM, OT>(
         &mut self,
