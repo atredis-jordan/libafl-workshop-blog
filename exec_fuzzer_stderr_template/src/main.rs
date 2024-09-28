@@ -57,7 +57,7 @@ use libafl::{
     events::{
         simple::SimpleEventManager,
         EventFirer,
-    }
+    },
     schedulers::RandScheduler,
 };
 
